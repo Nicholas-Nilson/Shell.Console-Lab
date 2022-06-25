@@ -37,8 +37,18 @@ It's a good practice to have a directory called `Dev` inside your home directory
 
 - Open up a terminal (Applications->Utilities->Terminal)
 - Find out what directory you're in using `pwd`
+
+A: /Users/nick
+
 - You know where you are, but not what's around you. Take a look around with `ls`
+
+A: Desktop Documents Library Music Projects
+   Dev Downloads Movies Pictures Public
+   
 - You probably started in your home directory, but just in case, tell the terminal to move to your home directory with `cd ~`. Use `pwd` again to confirm.
+
+A: still /Users/nick
+
 - Change into your Dev directory with `cd Dev`. If you don't have one you should create one (see above)
 -  Now let's try printing the contents of a file. First we need to create the file. One quick way to do that is with the command `echo "Hello Terminal" >myFile.txt`. We'll explain this command in greater detail in the next lab.
 -  Use `ls` to list the contents of your directory after running that command to see what changed.
@@ -48,6 +58,7 @@ It's a good practice to have a directory called `Dev` inside your home directory
 -  That file's a bit big for `cat`; try viewing it again with `less`. You can move around in `less` using ENTER, SPACE, and your arrow keys. To exit less, press the letter `q`. (note that if this is the first time you've used the terminal, your .bash_history file may still be very small)
 -  The last command for you to try out is `grep`. You can use this to search for a pattern in a file or other body of text. Try using it on that first file you created like this: `grep Hello myFile.txt`. Notice that the result is the whole line where the text you searched for occurs. What happens if you use grep to search for something that isn't in the file?
 
+A: Nothing / I am given the next CLI line.git 
 
 # Part 2
 
