@@ -120,6 +120,7 @@ There are many text editors out there. We will be using an editor called VIM (sh
 - This is the editor screen. VIM has two modes, insert mode and normal mode; it starts in normal mode. The `esc` key switches to normal mode from insert mode but not the other way -- if you ever get lost just hit escape.
 - We want to create a file, but we don't need anything in it yet. To save your current file you can use the `:w` command from normal mode. Type `:w myfile6` to save this empty file as "myfile6"
 - Quit VIM with the `:q` command and list the contents of your directory to confirm that you created a file (Shortcut: `:wq` allows you to save a file and quit with just one command)
+
 - Open that file by running vim with the filename. This time we'll add a little text.
 - Switch to insert mode by pressing the `a` key and type the message "Hello Editor!". Remember to press `esc` when you finish to switch back to normal mode.
 - Save the file (remember how?)
@@ -143,6 +144,8 @@ There are many text editors out there. We will be using an editor called VIM (sh
 - Now check the contents of your directory with `ls`. Where is the file you just renamed? In Linux and Unix systems, files and directories with names starting in "." are hidden, so by renaming your file you actually made it a hidden file. Let's see how we can view hidden files with `ls`
 - The `man` command lets you view the man(ual) pages for any command that is documented. Try viewing the man pages for ls, cp, and mv. Once you've looked at each of these and have a feel for how they are laid out, take another look at the ls man page and see if you can figure out how to view hidden files (remember, hidden files begin with a dot '.' ) <sub>**hint**: viewing man pages is like using less; you can move up and down in the file with the keyboard and when you want to exit you can press the 'q' key*</sub>
 
+A: ls -a
+
 ### Destroying files and directories
 
 - Make three files and two directories any way you like; create a file inside one of those directories.
@@ -151,8 +154,14 @@ There are many text editors out there. We will be using an editor called VIM (sh
 - Sometimes you want to make sure you are deleting the right files (particularly if you use the * wildcard). use `rm -i` to delete the last file and notice that you have to confirm it before it's deleted.
 - Try to delete one of those directories with `rm`. Notice that on its own it won't delete directories.
 - Use `rmdir` (or `rm -d`) to delete the empty directory, then try it on the directory with a file in it.
+
+A: CLI lets me know it is not an empty directory.
+
 - Directories can only be deleted when they are empty; this could get painful if you have a lot of files and directories inside of one you want to delete. Try deleting that directory again with the `rm -R` command. The `-R` flag tells `rm` to recursively delete the contents of each directory it encounters and then delete the directory.
 - **Bonus**: run the command `echo "Hello" >-toughFile` and then try to delete the file created by that command. There are at least two ways to do this.
+
+A: rm -- -toughFile
+   rm ./-toughFile   
 
 
 ### The Art of Redirection
